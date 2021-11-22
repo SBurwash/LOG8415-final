@@ -107,3 +107,18 @@ resource "azurerm_linux_virtual_machine" "MainVM" {
         storage_account_uri = azurerm_storage_account.MainStorageAccount.primary_blob_endpoint
     }
 }
+
+# resource "azurerm_virtual_machine_extension" "MainVMExt" {
+#     name                    = "MainVMExt"
+#     virtual_machine_id   = azurerm_linux_virtual_machine.MainVM.id
+#     publisher            = "Microsoft.Azure.Extensions"
+#     type                 = "CustomScript"
+#     type_handler_version = "2.0"
+
+#     protected_settings = <<PROT
+#     {
+#         "script": "${base64encode(file(var.execute_script))}"
+#     }
+#     PROT
+# }
+

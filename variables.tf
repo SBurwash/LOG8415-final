@@ -12,3 +12,8 @@ variable "SSHPubKey" {
   type = string
   default = "~/.ssh/id_rsa.pub"
 }
+
+variable "execute_script" {
+  type = string
+  default = "exec.bash"
+}
