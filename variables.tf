@@ -8,3 +8,7 @@ variable "resource_group_location" {
   description   = "Location of the resource group."
 }
 
+variable "SSHPubKey" {
+  type = string
+  default = "~/.ssh/id_rsa.pub"
+}
